@@ -2,7 +2,6 @@ const { default: makeWASocket, useMultiFileAuthState } = require("@whiskeysocket
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios"); // Add axios for HTTP requests
-const apiCommands = require("./commands/nekos");
 
 async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState("auth_info");
@@ -29,9 +28,10 @@ async function startBot() {
 
     sock.ev.on("messages.upsert", async (msg) => {
         const message = msg.messages[0];
-        if (!message.message || message.key.fromMe) return;
+        if (!message.message) return;
 
         const chatId = message.key.remoteJid;
+        const senderId = message.key.participant || message.key.remoteJid; // Get sender ID
         const text = message.message.conversation || message.message.extendedTextMessage?.text;
 
         if (!text) return; // Ensure text is defined
@@ -40,14 +40,12 @@ async function startBot() {
         const command = commands[text.slice(1)];
         if (command) {
             try {
-                await command.execute(sock, chatId);
+                await command.execute(sock, chatId, senderId); // Pass senderId to command
             } catch (error) {
                 console.error(`Komut çalıştırılırken hata oluştu: ${text}`, error);
                 await sock.sendMessage(chatId, { text: "Komut çalıştırılırken bir hata oluştu." });
             }
-        } else if (text.startsWith("!")) { // Handle API-based commands
-            await apiCommands.execute(sock, chatId, text);
-        }
+        } 
     });
 }
 
