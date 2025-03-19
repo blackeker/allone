@@ -1,0 +1,346 @@
+{
+  "departments": [
+    {
+      "name": "Fırat Üniversitesi Ana Santral",
+      "extension": "9",
+      "phone": "+904242370000",
+      "type": "general"
+    },
+    {
+      "name": "Fırat Üniversitesi Alo Güvenlik",
+      "extension": "3071",
+      "phone": "+904246073071",
+      "type": "general"
+    },
+    {
+      "name": "Fırat Üniversitesi Hastanesi Ana Santral",
+      "extension": "",
+      "phone": "+904242333555",
+      "type": "hospital"
+    },
+    {
+      "name": "Fırat Üniversitesi Diş Hastanesi",
+      "extension": "6616",
+      "phone": "+904246076616",
+      "type": "hospital"
+    },
+    {
+      "name": "Fırat Üniversitesi Hayvan Hastanesi",
+      "extension": "3881",
+      "phone": "+904246073881",
+      "type": "hospital"
+    },
+    {
+      "name": "Basın Yayın ve Halkla İlişkiler Müdürlüğü",
+      "extension": "3021",
+      "phone": "+904246073021",
+      "type": "general"
+    },
+    {
+      "name": "Misafirhane",
+      "extension": "6000",
+      "phone": "+904246076000",
+      "type": "general"
+    },
+    {
+      "name": "Güvenlik Amirliği",
+      "extension": "3072",
+      "phone": "+904246073072",
+      "type": "general"
+    },
+    {
+      "name": "AKM (Atatürk Konferans Salonu)",
+      "extension": "5015",
+      "phone": "+904246075015",
+      "type": "general"
+    },
+    {
+      "name": "Sosyal Merkez",
+      "extension": "4084",
+      "phone": "+904246074084",
+      "type": "general"
+    },
+    {
+      "name": "Üniversite Evi",
+      "extension": "4327",
+      "phone": "+904246074327",
+      "type": "general"
+    },
+    {
+      "name": "ÖSYM Temsilciliği",
+      "extension": "5020",
+      "phone": "+904246075020",
+      "type": "general"
+    },
+    {
+      "name": "FÜBAP (F.Ü. Bilimsel Araştırma Projeleri)",
+      "extension": "4051",
+      "phone": "+904246074051",
+      "type": "general"
+    },
+    {
+      "name": "FÜGEM",
+      "extension": "3340",
+      "phone": "+904246073340",
+      "type": "general"
+    },
+    {
+      "name": "FÜZEM (F.Ü. Uzaktan Eğitim Merkez Müdürlüğü)",
+      "extension": "6509",
+      "phone": "+904246076509",
+      "type": "general"
+    },
+    {
+      "name": "Fırat Üniversitesi Açık Öğretim Bürosu",
+      "extension": "",
+      "phone": "+904242333594",
+      "type": "general"
+    },
+    {
+      "name": "FÜSEM (Sürekli Eğitim Merkez Müdürlüğü)",
+      "extension": "6513",
+      "phone": "+904246076513",
+      "type": "general"
+    },
+    {
+      "name": "ERASMUS (Dış İlişkiler Birim Koordinatörlüğü)",
+      "extension": "5193",
+      "phone": "+904246075193",
+      "type": "general"
+    },
+    {
+      "name": "Farabi ve Mevlana Koordinatörlüğü",
+      "extension": "5190",
+      "phone": "+904246075190",
+      "type": "general"
+    },
+    {
+      "name": "Öğrenci İşleri Daire Başkanlığı",
+      "extension": "3251",
+      "phone": "+904246073251",
+      "type": "general"
+    },
+    {
+      "name": "Kütüphane Daire Başkanlığı",
+      "extension": "5051",
+      "phone": "+904246075051",
+      "type": "general"
+    },
+    {
+      "name": "Bilgi İşlem Daire Başkanlığı",
+      "extension": "3151",
+      "phone": "+904246073151",
+      "type": "general"
+    },
+    {
+      "name": "İdari ve Mali İşler Daire Başkanlığı",
+      "extension": "3051",
+      "phone": "+904246073051",
+      "type": "general"
+    },
+    {
+      "name": "Personel Daire Başkanlığı",
+      "extension": "3016",
+      "phone": "+904246073016",
+      "type": "general"
+    },
+    {
+      "name": "Sağlık Kültür ve Spor Daire Başkanlığı",
+      "extension": "3206",
+      "phone": "+904246073206",
+      "type": "general"
+    },
+    {
+      "name": "Strateji Geliştirme Daire Başkanlığı",
+      "extension": "3044",
+      "phone": "+904246073044",
+      "type": "general"
+    },
+    {
+      "name": "Yapı İşleri Daire Başkanlığı",
+      "extension": "3101",
+      "phone": "+904246073101",
+      "type": "general"
+    },
+    {
+      "name": "Fen Edebiyat Fakültesi",
+      "extension": "3501",
+      "phone": "+904246073501",
+      "type": "faculty"
+    },
+    {
+      "name": "Eğitim Fakültesi",
+      "extension": "4901",
+      "phone": "+904246074901",
+      "type": "faculty"
+    },
+    {
+      "name": "Teknoloji Fakültesi",
+      "extension": "4201",
+      "phone": "+904246074201",
+      "type": "faculty"
+    },
+    {
+      "name": "İletişim Fakültesi",
+      "extension": "8801",
+      "phone": "+904246078801",
+      "type": "faculty"
+    },
+    {
+      "name": "İlahiyat Fakültesi",
+      "extension": "5101",
+      "phone": "+904246075101",
+      "type": "faculty"
+    },
+    {
+      "name": "Mühendislik Fakültesi",
+      "extension": "5001",
+      "phone": "+904246075001",
+      "type": "faculty"
+    },
+    {
+      "name": "Su Ürünleri Fakültesi",
+      "extension": "4511",
+      "phone": "+904246074511",
+      "type": "faculty"
+    },
+    {
+      "name": "İktisadi ve İdari Bilimler Fakültesi",
+      "extension": "4151",
+      "phone": "+904246074151",
+      "type": "faculty"
+    },
+    {
+      "name": "Tıp Fakültesi",
+      "extension": "4601",
+      "phone": "+904246074601",
+      "type": "faculty"
+    },
+    {
+      "name": "Veteriner Fakültesi",
+      "extension": "3901",
+      "phone": "+904246073901",
+      "type": "faculty"
+    },
+    {
+      "name": "Diş Fakültesi",
+      "extension": "6601",
+      "phone": "+904246076601",
+      "type": "faculty"
+    },
+    {
+      "name": "Sağlık Bilimleri Fakültesi",
+      "extension": "4573",
+      "phone": "+904246074573",
+      "type": "faculty"
+    },
+    {
+      "name": "Spor Bilimleri Fakültesi",
+      "extension": "6501",
+      "phone": "+904246076501",
+      "type": "faculty"
+    },
+    {
+      "name": "Mimarlık Fakültesi",
+      "extension": "8301",
+      "phone": "+904246078301",
+      "type": "faculty"
+    },
+    {
+      "name": "Eczacılık Fakültesi",
+      "extension": "6710",
+      "phone": "+904246076710",
+      "type": "faculty"
+    },
+    {
+      "name": "Devlet Konservatuarı",
+      "extension": "4115",
+      "phone": "+904246074115",
+      "type": "school"
+    },
+    {
+      "name": "Yabancı Diller Yüksekokulu",
+      "extension": "5652",
+      "phone": "+904246075652",
+      "type": "school"
+    },
+    {
+      "name": "Sivil Havacılık Yüksekokulu",
+      "extension": "8981",
+      "phone": "+904246078981",
+      "type": "school"
+    },
+    {
+      "name": "Süleyman Demirel Keban Meslek Yüksekokulu",
+      "extension": "8523",
+      "phone": "+904246078523",
+      "type": "school"
+    },
+    {
+      "name": "Sivrice Meslek Yüksekokulu",
+      "extension": "4108",
+      "phone": "+904246074108",
+      "type": "school"
+    },
+    {
+      "name": "Sağlık Hizmetleri Meslek Yüksekokulu",
+      "extension": "6531",
+      "phone": "+904246076531",
+      "type": "school"
+    },
+    {
+      "name": "Sosyal Bilimler Meslek Yüksekokulu",
+      "extension": "6571",
+      "phone": "+904246076571",
+      "type": "school"
+    },
+    {
+      "name": "Teknik Bilimler Meslek Yüksekokulu",
+      "extension": "7201",
+      "phone": "+904246077201",
+      "type": "school"
+    },
+    {
+      "name": "Karakoçan Meslek Yüksekokulu",
+      "extension": "8600",
+      "phone": "+904246078600",
+      "type": "school"
+    },
+    {
+      "name": "Kovancılar Meslek Yüksekokulu",
+      "extension": "8560",
+      "phone": "+904246078560",
+      "type": "school"
+    },
+    {
+      "name": "Baskil Meslek Yüksekokulu",
+      "extension": "8251",
+      "phone": "+904246078251",
+      "type": "school"
+    },
+    {
+      "name": "Fen Bilimleri Enstitüsü",
+      "extension": "5031",
+      "phone": "+904246075031",
+      "type": "institute"
+    },
+    {
+      "name": "Sağlık Bilimleri Enstitüsü",
+      "extension": "6461",
+      "phone": "+904246076461",
+      "type": "institute"
+    },
+    {
+      "name": "Sosyal Bilimleri Enstitüsü",
+      "extension": "3504",
+      "phone": "+904246073504",
+      "type": "institute"
+    },
+    {
+      "name": "Eğitim Bilimleri Enstitüsü",
+      "extension": "4865",
+      "phone": "+904246074865",
+      "type": "institute"
+    }
+  ]
+}
