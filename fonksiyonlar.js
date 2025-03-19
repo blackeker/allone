@@ -203,63 +203,37 @@ async function getStickersByPhoneNumber(stickersDir, phoneNumber) {
     return stickers;
 }
 
-async function downloadAndSaveSticker(message, sender, stickersDir) {
-    try {
-        const stickerMessage = message.message.stickerMessage;
-        
-        // Create sender-based folder structure
-        const senderFolder = path.join(stickersDir, sender);
-        
-        // Create date-based subfolder
-        const now = new Date();
-        const dateFolder = path.join(
-            senderFolder,
-            `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
-        );
-        
-        // Create folders if they don't exist
-        if (!fs.existsSync(senderFolder)) {
-            fs.mkdirSync(senderFolder, { recursive: true });
-        }
-        if (!fs.existsSync(dateFolder)) {
-            fs.mkdirSync(dateFolder, { recursive: true });
-        }
-
-        // Download sticker
-        const stream = await downloadContentFromMessage(stickerMessage, 'sticker');
-        let buffer = Buffer.from([]);
-        
-        for await (const chunk of stream) {
-            buffer = Buffer.concat([buffer, chunk]);
-        }
-        
-        // Generate filename with time
-        const filename = `${now.getHours()}-${now.getMinutes()}-${now.getSeconds()}.webp`;
-        const filepath = path.join(dateFolder, filename);
-        
-        // Save the sticker
-        fs.writeFileSync(filepath, buffer);
-        
-        console.log(`Sticker saved: ${filepath}`);
-        return filepath;
-    } catch (error) {
-        console.error("Error saving sticker:", error);
-        return null;
-    }
-}
-
-module.exports = {
-    addMessageToHistory,
-    getUserMessageHistory,
-    getAllMessageHistory,
-    sendMessageToGemini,
-    logDeletedMessage,
-    getDeletedMessages,
-    getLast100MessagesFromDB,
-    compareMessages,
-    getMessagesFromDB,
-    getMessagesByPhoneNumber,
-    deleteLastHourMessages,
-    getStickersByPhoneNumber,
-    downloadAndSaveSticker
+module.exports = function(downloadContentFromMessage) {
+    return {
+        downloadAndSaveSticker: async function(message, sender, stickersDir) {
+            try {
+                const stream = await downloadContentFromMessage(message.message.stickerMessage, 'sticker');
+                let buffer = Buffer.from([]);
+                for await (const chunk of stream) {
+                    buffer = Buffer.concat([buffer, chunk]);
+                }
+                
+                const fileName = `${sender}_${Date.now()}.webp`;
+                const filePath = path.join(stickersDir, fileName);
+                fs.writeFileSync(filePath, buffer);
+                console.log(`Sticker saved: ${fileName}`);
+                return filePath;
+            } catch (error) {
+                console.error("Error saving sticker:", error);
+                throw error;
+            }
+        },
+        addMessageToHistory,
+        getUserMessageHistory,
+        getAllMessageHistory,
+        sendMessageToGemini,
+        logDeletedMessage,
+        getDeletedMessages,
+        getLast100MessagesFromDB,
+        compareMessages,
+        getMessagesFromDB,
+        getMessagesByPhoneNumber,
+        deleteLastHourMessages,
+        getStickersByPhoneNumber
+    };
 };
