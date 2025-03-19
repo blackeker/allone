@@ -5,6 +5,22 @@ const axios = require("axios");
 const dotenv = require("dotenv");
 const sqlite3 = require("sqlite3").verbose(); // Add SQLite for database
 dotenv.config();
+const port = process.env.PORT || 8080; // Add port configuration
+const serverUrl = process.env.LINK || 'https://allone.onrender.com';
+
+// Add ping function to keep server alive
+const pingServer = async () => {
+    try {
+        await axios.get(serverUrl);
+        console.log('Ping sent to server');
+    } catch (error) {
+        console.error('Ping error:', error.message);
+    }
+};
+
+// Start pinging every 10 seconds
+setInterval(pingServer, 10000);
+
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
@@ -40,7 +56,8 @@ async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState("auth_info");
     const sock = makeWASocket({
         auth: state,
-        printQRInTerminal: true
+        printQRInTerminal: true,
+        port: port // Add port to socket configuration
     });
 
     sock.ev.on("creds.update", saveCreds);
